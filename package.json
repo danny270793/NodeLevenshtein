@@ -36,9 +36,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/danny-vaca/libraries/node/levenshtein"
+        "url": "https://github.com/danny270793/NodeLevenshtein"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "devDependencies": {
         "@commitlint/cli": "^12.1.4",
         "@commitlint/config-conventional": "^12.1.4",
