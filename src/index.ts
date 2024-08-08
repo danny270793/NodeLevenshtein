@@ -43,7 +43,7 @@ export default class Levenshtein {
                 matrix[row][col] = Math.min(
                     deleteCost,
                     insertCost,
-                    substitutionCost
+                    substitutionCost,
                 )
             }
         }
@@ -54,7 +54,7 @@ export default class Levenshtein {
     static computeDistance(
         word: string,
         matching: string,
-        costs: Costs = { inserts: 1, updates: 1, deletes: 1 }
+        costs: Costs = { inserts: 1, updates: 1, deletes: 1 },
     ): number {
         const matrix: number[][] = Levenshtein.matrix(word, matching, costs)
         return matrix[matrix.length - 1][matrix[0].length - 1]
@@ -63,7 +63,7 @@ export default class Levenshtein {
     static computePercentage(
         word: string,
         matching: string,
-        costs: Costs = { inserts: 1, updates: 1, deletes: 1 }
+        costs: Costs = { inserts: 1, updates: 1, deletes: 1 },
     ): number {
         return (
             1 -
@@ -74,7 +74,7 @@ export default class Levenshtein {
     static getBestMatch(
         options: string[],
         matching: string,
-        costs: Costs = { inserts: 1, updates: 1, deletes: 1 }
+        costs: Costs = { inserts: 1, updates: 1, deletes: 1 },
     ): BestMatch {
         const bestMatch: BestMatch = {
             text: '',
@@ -85,7 +85,7 @@ export default class Levenshtein {
             const percentage: number = Levenshtein.computePercentage(
                 option,
                 matching,
-                costs
+                costs,
             )
             if (percentage >= bestMatch.match) {
                 bestMatch.text = option
@@ -97,7 +97,7 @@ export default class Levenshtein {
 
     static getBestMatchOfArray(
         array: ConversationIntent[],
-        matching: string
+        matching: string,
     ): BestMatch {
         const bestMatch: BestMatch = {
             text: '',
@@ -108,7 +108,7 @@ export default class Levenshtein {
             value.options.forEach((option) => {
                 const percentage: number = Levenshtein.computePercentage(
                     option,
-                    matching.toLowerCase()
+                    matching.toLowerCase(),
                 )
                 if (percentage >= bestMatch.match) {
                     bestMatch.match = percentage

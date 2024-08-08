@@ -8,7 +8,7 @@ describe('Levenshtein class', () => {
             const expected: string = 'danni'
             const bestMatch: BestMatch = Levenshtein.getBestMatch(
                 options,
-                matching
+                matching,
             )
             expect(bestMatch.text).toBe(expected)
         })
@@ -44,7 +44,7 @@ describe('Levenshtein class', () => {
             const matching: string = 'Maria Jose'
             const bestMatchOfArray: BestMatch = Levenshtein.getBestMatchOfArray(
                 array,
-                matching
+                matching,
             )
             expect(bestMatchOfArray.name).toBe(expected)
         })
@@ -60,16 +60,16 @@ describe('Levenshtein class', () => {
             (
                 word: string,
                 matching: string,
-                costs: Costs = { inserts: 1, updates: 1, deletes: 1 }
+                costs: Costs = { inserts: 1, updates: 1, deletes: 1 },
             ) => {
                 const computePercentage: number = Levenshtein.computePercentage(
                     word,
                     matching,
-                    costs
+                    costs,
                 )
 
                 expect(computePercentage).toBeGreaterThanOrEqual(0.8)
-            }
+            },
         )
     })
 
@@ -89,10 +89,10 @@ describe('Levenshtein class', () => {
                             deletes: 1,
                         })
                     expect(distanceComputed.toFixed(4)).toBe(
-                        ((characters * index) / 10).toFixed(4)
+                        ((characters * index) / 10).toFixed(4),
                     )
                 }
-            }
+            },
         )
 
         test.each([
@@ -110,10 +110,10 @@ describe('Levenshtein class', () => {
                             deletes: index / 10,
                         })
                     expect(distanceComputed.toFixed(4)).toBe(
-                        ((characters * index) / 10).toFixed(4)
+                        ((characters * index) / 10).toFixed(4),
                     )
                 }
-            }
+            },
         )
 
         test.each([
@@ -131,10 +131,10 @@ describe('Levenshtein class', () => {
                             deletes: 1,
                         })
                     expect(distanceComputed.toFixed(4)).toBe(
-                        ((characters * index) / 10).toFixed(4)
+                        ((characters * index) / 10).toFixed(4),
                     )
                 }
-            }
+            },
         )
     })
 })

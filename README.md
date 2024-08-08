@@ -13,7 +13,7 @@
 ![NPM Downloads](https://img.shields.io/npm/dy/@danny270793/levenshtein)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/danny270793/NodeLevenshtein/total)
 
-Library to compute levenshtein distance between strings and find more similar phrase in a list 
+Library to compute levenshtein distance between strings and find more similar phrase in a list
 
 ## Instalation
 
@@ -34,7 +34,7 @@ const referenceWord: string = 'danny'
 const valueToCompare: string = 'danni'
 const computePercentage: number = Levenshtein.computePercentage(
     referenceWord,
-    valueToCompare
+    valueToCompare,
 )
 console.log(computePercentage)
 ```
@@ -62,10 +62,7 @@ import Levenshtein, { Costs, BestMatch } from '@danny270793/levenshtein'
 
 const options: string[] = ['danni', 'danniel', 'dani']
 const matching: string = 'danny'
-const bestMatch: BestMatch = Levenshtein.getBestMatch(
-    options,
-    matching
-)
+const bestMatch: BestMatch = Levenshtein.getBestMatch(options, matching)
 console.log(`more similar string ${bestMatch.text}`)
 console.log(`levenshtein distance of the more similar ${bestMatch.match}`)
 ```

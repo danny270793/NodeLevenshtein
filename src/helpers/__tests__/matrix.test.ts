@@ -18,7 +18,7 @@ describe('Matrix class', () => {
                         expect(item).toBe(value)
                     })
                 })
-            }
+            },
         )
     })
 })
