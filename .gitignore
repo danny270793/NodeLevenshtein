@@ -1,0 +1,9 @@
+build
+docs
+logs
+node_modules
+reports
+public
+
+.env
+.DS_Store

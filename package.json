@@ -1,0 +1,64 @@
+{
+    "name": "@danny270793/levenshtein",
+    "contributors": [
+        "Neil Vaca <nvaca@maintlatam.com>"
+    ],
+    "version": "1.0.9",
+    "description": "library to measure levenshtein distance between words",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "files": [
+        "build/**/*"
+    ],
+    "scripts": {
+        "husky:install": "rm -r -f .husky && husky install",
+        "husky:setup": "npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1' && npx husky add .husky/pre-commit 'npx --no-install pretty-quick --staged'",
+        "install:force": "rm -r -f node_modules && npm install -f",
+        "format": "pretty-quick",
+        "lint": "eslint . --ext .ts",
+        "lint:markdown": "markdownlint \"**/*.md\" --config=.markdownlint.json --ignore-path=.markdownlintignore",
+        "documentate": "typedoc --out ./public/docs src",
+        "git:commit": "npm run format && npm run lint && npm run lint:markdown && git add . && git commit",
+        "git:release": "npm run git:commit && standard-version && git push --follow-tags origin master",
+        "build": "rm -r -f && tsc",
+        "start": "node build/index.js",
+        "start:watch": "nodemon --ext \"ts\" --exec \"npm run build && npm run start\" --watch \"./src/*\"",
+        "test": "jest --config jestconfig.json",
+        "test:watch": "nodemon --ext \"ts\" --exec \"npm run test\" --watch \"./src/*\""
+    },
+    "keywords": [
+        "levenshtein"
+    ],
+    "author": {
+        "name": "Danny Vaca",
+        "email": "danny270793@gmail.com",
+        "url": "https://danny270793.github.io/#/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/danny-vaca/libraries/node/levenshtein"
+    },
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@commitlint/cli": "^12.1.4",
+        "@commitlint/config-conventional": "^12.1.4",
+        "@types/jest": "^26.0.24",
+        "@types/node": "^16.4.12",
+        "@typescript-eslint/eslint-plugin": "^4.29.0",
+        "@typescript-eslint/parser": "^4.29.0",
+        "eslint": "^7.32.0",
+        "husky": "^7.0.1",
+        "jest": "^27.0.6",
+        "jest-html-reporters": "^2.1.6",
+        "jest-junit": "^12.2.0",
+        "markdownlint-cli": "^0.28.1",
+        "nodemon": "^2.0.12",
+        "prettier": "^2.3.2",
+        "pretty-quick": "^3.1.1",
+        "standard-version": "^9.3.1",
+        "ts-jest": "^27.0.4",
+        "ts-node": "^10.1.0",
+        "typedoc": "^0.21.5",
+        "typescript": "^4.3.5"
+    }
+}
