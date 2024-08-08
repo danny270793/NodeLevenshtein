@@ -1,16 +1,16 @@
 # Levenshtein
 
 [![Github pipeline status](https://github.com/danny270793/NodeLevenshtein/actions/workflows/releaser.yaml/badge.svg)](https://github.com/danny270793/NodeLevenshtein/actions/workflows/releaser.yaml)
-![NPM Type Definitions](https://img.shields.io/npm/types/%40danny270793%2Flevenshtein)
+![NPM Type Definitions](https://img.shields.io/npm/types/@danny270793/levenshtein)
 
-[![install size](https://packagephobia.com/badge?p=@danny270793/NodeLevenshtein)](https://packagephobia.com/result?p=@danny270793/NodeLevenshtein)
-![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40danny270793%2Flevenshtein)
+[![install size](https://packagephobia.com/badge?p=@danny270793/levenshtein)](https://packagephobia.com/result?p=@danny270793/levenshtein)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/@danny270793/levenshtein)
 ![GitHub repo size](https://img.shields.io/github/repo-size/danny270793/NodeLevenshtein)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/danny270793/NodeLevenshtein)
-![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/%40danny270793/NodeLevenshtein)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@danny270793/levenshtein)
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/danny270793/NodeLevenshtein)
-![NPM Downloads](https://img.shields.io/npm/dy/%40danny270793%2Flevenshtein)
+![NPM Downloads](https://img.shields.io/npm/dy/@danny270793/levenshtein)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/danny270793/NodeLevenshtein/total)
 
 Library to compute levenshtein distance between strings and find more similar phrase in a list 
