@@ -1,6 +1,6 @@
 # Levenshtein
 
-[![Github pipeline status](https://github.com/danny270793/NodeLevenshtein/actions/workflows/releaser.yaml/badge.svg)](https://github.com/danny270793/NodeLevenshtein/actions/workflows/release.yaml)
+[![Github pipeline status](https://github.com/danny270793/NodeLevenshtein/actions/workflows/releaser.yaml/badge.svg)](https://github.com/danny270793/NodeLevenshtein/actions/workflows/releaser.yaml)
 ![NPM Type Definitions](https://img.shields.io/npm/types/%40danny270793%2Flevenshtein)
 
 [![install size](https://packagephobia.com/badge?p=@danny270793/NodeLevenshtein)](https://packagephobia.com/result?p=@danny270793/NodeLevenshtein)
