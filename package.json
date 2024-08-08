@@ -3,7 +3,7 @@
     "contributors": [
         "Neil Vaca <nvaca@maintlatam.com>"
     ],
-    "version": "1.0.",
+    "version": "1.0.0",
     "description": "library to measure levenshtein distance between words",
     "main": "build/index.js",
     "types": "build/index.d.ts",
