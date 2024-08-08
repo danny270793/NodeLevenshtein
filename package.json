@@ -3,7 +3,7 @@
     "contributors": [
         "Neil Vaca <nvaca@maintlatam.com>"
     ],
-    "version": "1.0.9",
+    "version": "1.0.",
     "description": "library to measure levenshtein distance between words",
     "main": "build/index.js",
     "types": "build/index.d.ts",
@@ -36,7 +36,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/danny270793/NodeLevenshtein"
+        "url": "git+https://github.com/danny270793/NodeLevenshtein.git"
     },
     "license": "MIT",
     "devDependencies": {
